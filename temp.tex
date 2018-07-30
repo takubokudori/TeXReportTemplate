@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper]{jsarticle}
+%\documentclass[11pt,a4paper,twocolumn]{jsarticle}
+%
+\usepackage{amsmath,amssymb} % 拡張数学記号
+\usepackage{bm} % ベクトル記号
+\usepackage{tabularx} % 特殊表
+\usepackage[dvipdfmx]{graphicx} % グラフィック機能追加
+\usepackage{subfigure} % 画像の(A)(B)並列設置
+\usepackage{listings,jlisting} % プログラムの設置
+\usepackage{ascmac} % 複数行の枠囲み
+\usepackage{here} % 強制写真挿入
+\usepackage{url} % url表示
+
+% ページ番号を右上にする始まり
+\usepackage{fancyhdr}
+ \pagestyle{fancy}
+ \lhead{}
+ \rhead{}
+ \rhead{\thepage{}} % ヘッダ右側に\thepage{}で番号表示
+ \cfoot{}
+ \renewcommand{\headrulewidth}{0pt}
+% ページ番号を右上にする終わり
+
+\usepackage[top=20truemm,bottom=20truemm,left=40truemm,right=30truemm]{geometry}
+\setlength{\textwidth}{\fullwidth} % 1行の文字数を振る文字に
+%\setlength{\textwidth}{50zw} % 一行の文字数を全角50文字に
+\setlength{\textheight}{40\baselineskip} % 1ページの行数を40行に
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt} % 上位置をデフォルトから0ptずらす
+\setlength{\headheight}{18pt}
+\setlength{\headsep}{0pt}
+%
+\newcommand{\divergence}{\mathrm{div}\,}  %ダイバージェンス
+\newcommand{\grad}{\mathrm{grad}\,}  %グラディエント
+\newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
+\newcommand{\dt}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dt}}} % dt微分
+\newcommand{\dx}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dx}}} % dt微分
+\newcommand{\df}[2]{\cfrac{\mathrm{d}#1}{\mathrm{d}#2}} % 総合微分
+\newcommand{\pf}[2]{\cfrac{\partial #1}{\partial #2}} % 総合偏微分
+\newcommand{\m}[1]{\mathrm{#1}} % 通常体省略形
+\renewcommand{\lstlistingname}{プログラム} % プログラムのタイトル
+\def\MARU#1{{\rm\ooalign{\hfil\lower.168ex\hbox{#1}\hfil \crcr\mathhexbox20D}}} % \MARU{#1}で丸付き番号を出力できる
+
+\lstset{%
+	language={HTML},% HTML表記のときの言語
+  basicstyle={\small\ttfamily},% デフォルトのフォント
+  identifierstyle={\small},% 識別子部分のフォント
+  commentstyle={\small\ttfamily},% コメント部分のフォント
+  keywordstyle={\small\bfseries},% キーワード部分のフォント
+  ndkeywordstyle={\small},%
+  stringstyle={\small\ttfamily},% 文字列部分のフォント
+  tabsize=4,% タブ幅を4文字に
+  %  frame={tb},
+  breaklines=true,% trueで右末端まで来たら折り返す
+  columns=[l]{fullflexible},%
+	numbers=left,% 左側に行番号を振る．none(無し),right(右側),leftを指定可
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},% 行番号のフォント
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex% 行間隔
+}
+\makeatletter
+\def\lst@lettertrue{\let\lst@ifletter\iffalse}
+\makeatother
+%
+%ここにタイトル記入
+%\title{...}
+%\author{...}
+%\date{\today}
+\begin{document}
+%\maketitle
+%ここにタイトル記入
+
+\section{目的}
+
+%
+\end{document}
