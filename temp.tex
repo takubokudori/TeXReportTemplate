@@ -1,80 +1,80 @@
 \documentclass[11pt,a4paper]{jsarticle}
 %\documentclass[11pt,a4paper,twocolumn]{jsarticle}
 %
-\usepackage{amsmath,amssymb} % Šg’£”Šw‹L†
-\usepackage{bm} % ƒxƒNƒgƒ‹‹L†
-\usepackage{tabularx} % “Áê•\
-\usepackage[dvipdfmx]{graphicx} % ƒOƒ‰ƒtƒBƒbƒN‹@”\’Ç‰Á
-\usepackage{subfigure} % ‰æ‘œ‚Ì(A)(B)•À—ñİ’u
-\usepackage{listings,jlisting} % ƒvƒƒOƒ‰ƒ€‚Ìİ’u
-\usepackage{ascmac} % •¡”s‚Ì˜gˆÍ‚İ
-\usepackage{here} % ‹­§Ê^‘}“ü
-\usepackage{url} % url•\¦
+\usepackage{amsmath,amssymb} % æ‹¡å¼µæ•°å­¦è¨˜å·
+\usepackage{bm} % ãƒ™ã‚¯ãƒˆãƒ«è¨˜å·
+\usepackage{tabularx} % ç‰¹æ®Šè¡¨
+\usepackage[dvipdfmx]{graphicx} % ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯æ©Ÿèƒ½è¿½åŠ 
+\usepackage{subfigure} % ç”»åƒã®(A)(B)ä¸¦åˆ—è¨­ç½®
+\usepackage{listings,jlisting} % ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®è¨­ç½®
+\usepackage{ascmac} % è¤‡æ•°è¡Œã®æ å›²ã¿
+\usepackage{here} % å¼·åˆ¶å†™çœŸæŒ¿å…¥
+\usepackage{url} % urlè¡¨ç¤º
 
-% ƒy[ƒW”Ô†‚ğ‰Eã‚É‚·‚én‚Ü‚è
+% ãƒšãƒ¼ã‚¸ç•ªå·ã‚’å³ä¸Šã«ã™ã‚‹å§‹ã¾ã‚Š
 \usepackage{fancyhdr}
  \pagestyle{fancy}
  \lhead{}
  \rhead{}
- \rhead{\thepage{}} % ƒwƒbƒ_‰E‘¤‚É\thepage{}‚Å”Ô†•\¦
+ \rhead{\thepage{}} % ãƒ˜ãƒƒãƒ€å³å´ã«\thepage{}ã§ç•ªå·è¡¨ç¤º
  \cfoot{}
  \renewcommand{\headrulewidth}{0pt}
-% ƒy[ƒW”Ô†‚ğ‰Eã‚É‚·‚éI‚í‚è
+% ãƒšãƒ¼ã‚¸ç•ªå·ã‚’å³ä¸Šã«ã™ã‚‹çµ‚ã‚ã‚Š
 
 \usepackage[top=20truemm,bottom=20truemm,left=40truemm,right=30truemm]{geometry}
-\setlength{\textwidth}{\fullwidth} % 1s‚Ì•¶š”‚ğU‚é•¶š‚É
-%\setlength{\textwidth}{50zw} % ˆês‚Ì•¶š”‚ğ‘SŠp50•¶š‚É
-\setlength{\textheight}{40\baselineskip} % 1ƒy[ƒW‚Ìs”‚ğ40s‚É
+\setlength{\textwidth}{\fullwidth} % 1è¡Œã®æ–‡å­—æ•°ã‚’å…¨è§’æ–‡å­—ã«
+%\setlength{\textwidth}{50zw} % ä¸€è¡Œã®æ–‡å­—æ•°ã‚’å…¨è§’50æ–‡å­—ã«
+\setlength{\textheight}{40\baselineskip} % 1ãƒšãƒ¼ã‚¸ã®è¡Œæ•°ã‚’40è¡Œã«
 \addtolength{\textheight}{\topskip}
 \setlength{\voffset}{-0.2in}
-\setlength{\topmargin}{0pt} % ãˆÊ’u‚ğƒfƒtƒHƒ‹ƒg‚©‚ç0pt‚¸‚ç‚·
+\setlength{\topmargin}{0pt} % ä¸Šä½ç½®ã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‹ã‚‰0ptãšã‚‰ã™
 \setlength{\headheight}{18pt}
 \setlength{\headsep}{0pt}
 %
-\newcommand{\divergence}{\mathrm{div}\,}  %ƒ_ƒCƒo[ƒWƒFƒ“ƒX
-\newcommand{\grad}{\mathrm{grad}\,}  %ƒOƒ‰ƒfƒBƒGƒ“ƒg
-\newcommand{\rot}{\mathrm{rot}\,}  %ƒ[ƒe[ƒVƒ‡ƒ“
-\newcommand{\dt}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dt}}} % dt”÷•ª
-\newcommand{\dx}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dx}}} % dt”÷•ª
-\newcommand{\df}[2]{\cfrac{\mathrm{d}#1}{\mathrm{d}#2}} % ‘‡”÷•ª
-\newcommand{\pf}[2]{\cfrac{\partial #1}{\partial #2}} % ‘‡•Î”÷•ª
-\newcommand{\m}[1]{\mathrm{#1}} % ’Êí‘ÌÈ—ªŒ`
-\renewcommand{\lstlistingname}{ƒvƒƒOƒ‰ƒ€} % ƒvƒƒOƒ‰ƒ€‚Ìƒ^ƒCƒgƒ‹
-\def\MARU#1{{\rm\ooalign{\hfil\lower.168ex\hbox{#1}\hfil \crcr\mathhexbox20D}}} % \MARU{#1}‚ÅŠÛ•t‚«”Ô†‚ğo—Í‚Å‚«‚é
+\newcommand{\divergence}{\mathrm{div}\,}  %ãƒ€ã‚¤ãƒãƒ¼ã‚¸ã‚§ãƒ³ã‚¹
+\newcommand{\grad}{\mathrm{grad}\,}  %ã‚°ãƒ©ãƒ‡ã‚£ã‚¨ãƒ³ãƒˆ
+\newcommand{\rot}{\mathrm{rot}\,}  %ãƒ­ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
+\newcommand{\dt}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dt}}} % dtå¾®åˆ†
+\newcommand{\dx}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dx}}} % dtå¾®åˆ†
+\newcommand{\df}[2]{\cfrac{\mathrm{d}#1}{\mathrm{d}#2}} % ç·åˆå¾®åˆ†
+\newcommand{\pf}[2]{\cfrac{\partial #1}{\partial #2}} % ç·åˆåå¾®åˆ†
+\newcommand{\m}[1]{\mathrm{#1}} % é€šå¸¸ä½“çœç•¥å½¢
+\renewcommand{\lstlistingname}{ãƒ—ãƒ­ã‚°ãƒ©ãƒ } % ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚¿ã‚¤ãƒˆãƒ«
+\def\MARU#1{{\rm\ooalign{\hfil\lower.168ex\hbox{#1}\hfil \crcr\mathhexbox20D}}} % \MARU{#1}ã§ä¸¸ä»˜ãç•ªå·ã‚’å‡ºåŠ›ã§ãã‚‹
 
 \lstset{%
-	language={HTML},% HTML•\‹L‚Ì‚Æ‚«‚ÌŒ¾Œê
-  basicstyle={\small\ttfamily},% ƒfƒtƒHƒ‹ƒg‚ÌƒtƒHƒ“ƒg
-  identifierstyle={\small},% ¯•Êq•”•ª‚ÌƒtƒHƒ“ƒg
-  commentstyle={\small\ttfamily},% ƒRƒƒ“ƒg•”•ª‚ÌƒtƒHƒ“ƒg
-  keywordstyle={\small\bfseries},% ƒL[ƒ[ƒh•”•ª‚ÌƒtƒHƒ“ƒg
+	language={HTML},% HTMLè¡¨è¨˜ã®ã¨ãã®è¨€èª
+  basicstyle={\small\ttfamily},% ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ•ã‚©ãƒ³ãƒˆ
+  identifierstyle={\small},% è­˜åˆ¥å­éƒ¨åˆ†ã®ãƒ•ã‚©ãƒ³ãƒˆ
+  commentstyle={\small\ttfamily},% ã‚³ãƒ¡ãƒ³ãƒˆéƒ¨åˆ†ã®ãƒ•ã‚©ãƒ³ãƒˆ
+  keywordstyle={\small\bfseries},% ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰éƒ¨åˆ†ã®ãƒ•ã‚©ãƒ³ãƒˆ
   ndkeywordstyle={\small},%
-  stringstyle={\small\ttfamily},% •¶š—ñ•”•ª‚ÌƒtƒHƒ“ƒg
-  tabsize=4,% ƒ^ƒu•‚ğ4•¶š‚É
+  stringstyle={\small\ttfamily},% æ–‡å­—åˆ—éƒ¨åˆ†ã®ãƒ•ã‚©ãƒ³ãƒˆ
+  tabsize=4,% ã‚¿ãƒ–å¹…ã‚’4æ–‡å­—ã«
   %  frame={tb},
-  breaklines=true,% true‚Å‰E––’[‚Ü‚Å—ˆ‚½‚çÜ‚è•Ô‚·
+  breaklines=true,% trueã§å³æœ«ç«¯ã¾ã§æ¥ãŸã‚‰æŠ˜ã‚Šè¿”ã™
   columns=[l]{fullflexible},%
-	numbers=left,% ¶‘¤‚És”Ô†‚ğU‚éDnone(–³‚µ),right(‰E‘¤),left‚ğw’è‰Â
+	numbers=left,% å·¦å´ã«è¡Œç•ªå·ã‚’æŒ¯ã‚‹ï¼none(ç„¡ã—),right(å³å´),leftã‚’æŒ‡å®šå¯
   xrightmargin=0zw,%
   xleftmargin=3zw,%
-  numberstyle={\scriptsize},% s”Ô†‚ÌƒtƒHƒ“ƒg
+  numberstyle={\scriptsize},% è¡Œç•ªå·ã®ãƒ•ã‚©ãƒ³ãƒˆ
   stepnumber=1,
   numbersep=1zw,%
-  lineskip=-0.5ex% sŠÔŠu
+  lineskip=-0.5ex% è¡Œé–“éš”
 }
 \makeatletter
 \def\lst@lettertrue{\let\lst@ifletter\iffalse}
 \makeatother
 %
-%‚±‚±‚Éƒ^ƒCƒgƒ‹‹L“ü
+%ã“ã“ã«ã‚¿ã‚¤ãƒˆãƒ«è¨˜å…¥
 %\title{...}
 %\author{...}
 %\date{\today}
 \begin{document}
 %\maketitle
-%‚±‚±‚Éƒ^ƒCƒgƒ‹‹L“ü
+%ã“ã“ã«ã‚¿ã‚¤ãƒˆãƒ«è¨˜å…¥
 
-\section{–Ú“I}
+\section{ç›®çš„}
 
 %
 \end{document}
