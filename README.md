@@ -18,3 +18,13 @@ tx.bat [コンパイルしたいファイル名]
 引数を指定せずにtx.batを実行するとこのファイルを参照して，前回と同じファイルをコンパイルしようとします．
 
 tx.logファイルにそれ以外の用途はないので不要であれば削除してください．
+
+## 依存
+
+[abtexinst](https://www.ms.u-tokyo.ac.jp/~abenori/soft/abtexinst.html)
+
+[jlistings.sty](https://ja.osdn.net/projects/mytexpert/downloads/26068/jlisting.sty.bz2/)
+[subfigure](https://ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure)
+
+styはw32tex\share\texmf-dist\tex\latexに入れるだけ
+insは `latex xxx.ins` を実行して w32tex\share\texmf-dist\tex\latex\xxx にinsファイルなどごと入れる
