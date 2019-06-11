@@ -26,6 +26,8 @@ tx.logファイルにそれ以外の用途はないので不要であれば削�
 
 [subfigure.ins](https://ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure)
 
+[mathtools](https://ctan.org/tex-archive/macros/latex/contrib/mathtools)
+
 styはw32tex\share\texmf-dist\tex\latexに入れるだけ
 
 insは `latex xxx.ins` を実行して w32tex\share\texmf-dist\tex\latex\xxx にinsファイルなどごと入れる
