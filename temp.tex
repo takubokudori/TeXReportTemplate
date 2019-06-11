@@ -5,8 +5,8 @@
 \usepackage{bm} % ベクトル記号
 \usepackage{tabularx} % 特殊表
 \usepackage[dvipdfmx]{graphicx} % グラフィック機能追加
-\usepackage{subfigure} % 画像の(A)(B)並列設置
-\usepackage{listings,jlisting} % プログラムの設置
+\usepackage{subfigure} % 画像の(A)(B)並列設置(subfigure.sty)
+\usepackage{listings,jlisting} % プログラムの設置(jlisting.sty)
 \usepackage{ascmac} % 複数行の枠囲み
 \usepackage{here} % 強制写真挿入
 \usepackage{url} % url表示
@@ -14,10 +14,9 @@
 % ページ番号を右上にする始まり
 \usepackage{fancyhdr}
  \pagestyle{fancy}
- \lhead{}
- \rhead{}
- \rhead{\thepage{}} % ヘッダ右側に\thepage{}で番号表示
- \cfoot{}
+ \lhead{} % ヘッダ左側(header left)
+ \rhead{\thepage{}} % ヘッダ右側(header right)に\thepage{}で番号表示
+ \cfoot{} % フッター中央(footer center)
  \renewcommand{\headrulewidth}{0pt}
 % ページ番号を右上にする終わり
 
@@ -25,17 +24,17 @@
 \setlength{\textwidth}{\fullwidth} % 1行の文字数を全角文字に
 %\setlength{\textwidth}{50zw} % 一行の文字数を全角50文字に
 \setlength{\textheight}{40\baselineskip} % 1ページの行数を40行に
-\addtolength{\textheight}{\topskip}
-\setlength{\voffset}{-0.2in}
+\addtolength{\textheight}{\topskip} % 40行に収めるためにtopskipを足す
+\setlength{\voffset}{-0.2in} % vertical offset 上に0.2インチずらす
 \setlength{\topmargin}{0pt} % 上位置をデフォルトから0ptずらす
-\setlength{\headheight}{18pt}
-\setlength{\headsep}{0pt}
+\setlength{\headheight}{18pt} % ヘッダーの高さを18ptにする
+\setlength{\headsep}{0pt} % ヘッダと本文間の余白を無くす
 %
 \newcommand{\divergence}{\mathrm{div}\,}  %ダイバージェンス
 \newcommand{\grad}{\mathrm{grad}\,}  %グラディエント
 \newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
 \newcommand{\dt}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dt}}} % dt微分
-\newcommand{\dx}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dx}}} % dt微分
+\newcommand{\dx}[1][]{\cfrac{\mathrm{d}#1}{\mathrm{dx}}} % dx微分
 \newcommand{\df}[2]{\cfrac{\mathrm{d}#1}{\mathrm{d}#2}} % 総合微分
 \newcommand{\pf}[2]{\cfrac{\partial #1}{\partial #2}} % 総合偏微分
 \newcommand{\m}[1]{\mathrm{#1}} % 通常体省略形
